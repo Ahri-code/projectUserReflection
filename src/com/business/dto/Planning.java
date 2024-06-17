@@ -1,39 +1,39 @@
 package com.business.dto;
 
 public class Planning {
-    private int hourMonday;
+    private Integer hourMonday;
     private String nameMondayInstructor;
     private String nameMondayActivity;
 
-    private int hourTuesday;
+    private Integer hourTuesday;
     private String nameTuesdayInstructor;
     private String nameTuesdayActivity;
 
-    private int hourWednesday;
+    private Integer hourWednesday;
     private String nameWednesdayInstructor;
     private String nameWednesdayActivity;
 
-    private int hourThursday;
+    private Integer hourThursday;
     private String nameThursdayInstructor;
     private String nameThursdayActivity;
 
-    private int hourFriday;
+    private Integer hourFriday;
     private String nameFridayInstructor;
     private String nameFridayActivity;
 
-    private int hourSaturday;
+    private Integer hourSaturday;
     private String nameSaturdayInstructor;
     private String nameSaturdayActivity;
 
-    private int hourSunday;
+    private Integer hourSunday;
     private String nameSundayInstructor;
     private String nameSundayActivity;
 
-    public int getHourMonday() {
+    public Integer getHourMonday() {
         return hourMonday;
     }
 
-    public void setHourMonday(int hourMonday) {
+    public void setHourMonday(Integer hourMonday) {
         this.hourMonday = hourMonday;
     }
 
@@ -53,11 +53,11 @@ public class Planning {
         this.nameMondayActivity = nameMondayActivity;
     }
 
-    public int getHourTuesday() {
+    public Integer getHourTuesday() {
         return hourTuesday;
     }
 
-    public void setHourTuesday(int hourTuesday) {
+    public void setHourTuesday(Integer hourTuesday) {
         this.hourTuesday = hourTuesday;
     }
 
@@ -77,11 +77,11 @@ public class Planning {
         this.nameTuesdayActivity = nameTuesdayActivity;
     }
 
-    public int getHourWednesday() {
+    public Integer getHourWednesday() {
         return hourWednesday;
     }
 
-    public void setHourWednesday(int hourWednesday) {
+    public void setHourWednesday(Integer hourWednesday) {
         this.hourWednesday = hourWednesday;
     }
 
@@ -101,11 +101,11 @@ public class Planning {
         this.nameWednesdayActivity = nameWednesdayActivity;
     }
 
-    public int getHourThursday() {
+    public Integer getHourThursday() {
         return hourThursday;
     }
 
-    public void setHourThursday(int hourThursday) {
+    public void setHourThursday(Integer hourThursday) {
         this.hourThursday = hourThursday;
     }
 
@@ -125,11 +125,11 @@ public class Planning {
         this.nameThursdayActivity = nameThursdayActivity;
     }
 
-    public int getHourFriday() {
+    public Integer getHourFriday() {
         return hourFriday;
     }
 
-    public void setHourFriday(int hourFriday) {
+    public void setHourFriday(Integer hourFriday) {
         this.hourFriday = hourFriday;
     }
 
@@ -149,11 +149,11 @@ public class Planning {
         this.nameFridayActivity = nameFridayActivity;
     }
 
-    public int getHourSaturday() {
+    public Integer getHourSaturday() {
         return hourSaturday;
     }
 
-    public void setHourSaturday(int hourSaturday) {
+    public void setHourSaturday(Integer hourSaturday) {
         this.hourSaturday = hourSaturday;
     }
 
@@ -173,11 +173,11 @@ public class Planning {
         this.nameSaturdayActivity = nameSaturdayActivity;
     }
 
-    public int getHourSunday() {
+    public Integer getHourSunday() {
         return hourSunday;
     }
 
-    public void setHourSunday(int hourSunday) {
+    public void setHourSunday(Integer hourSunday) {
         this.hourSunday = hourSunday;
     }
 
@@ -199,28 +199,13 @@ public class Planning {
 
     @Override
     public String toString() {
-        return "Planning{" +
-                "hourMonday=" + hourMonday +
-                ", nameMondayInstructor='" + nameMondayInstructor + '\'' +
-                ", nameMondayActivity='" + nameMondayActivity + '\'' +
-                ", hourTuesday=" + hourTuesday +
-                ", nameTuesdayInstructor='" + nameTuesdayInstructor + '\'' +
-                ", nameTuesdayActivity='" + nameTuesdayActivity + '\'' +
-                ", hourWednesday=" + hourWednesday +
-                ", nameWednesdayInstructor='" + nameWednesdayInstructor + '\'' +
-                ", nameWednesdayActivity='" + nameWednesdayActivity + '\'' +
-                ", hourThursday=" + hourThursday +
-                ", nameThursdayInstructor='" + nameThursdayInstructor + '\'' +
-                ", nameThursdayActivity='" + nameThursdayActivity + '\'' +
-                ", hourFriday=" + hourFriday +
-                ", nameFridayInstructor='" + nameFridayInstructor + '\'' +
-                ", nameFridayActivity='" + nameFridayActivity + '\'' +
-                ", hourSaturday=" + hourSaturday +
-                ", nameSaturdayInstructor='" + nameSaturdayInstructor + '\'' +
-                ", nameSaturdayActivity='" + nameSaturdayActivity + '\'' +
-                ", hourSunday=" + hourSunday +
-                ", nameSundayInstructor='" + nameSundayInstructor + '\'' +
-                ", nameSundayActivity='" + nameSundayActivity + '\'' +
-                '}';
+        return "Planning:\n" +
+                "| hourMonday: " + hourMonday + " |" + " nameMondayInstructor: " + nameMondayInstructor + " |" + " nameMondayActivity: " + nameMondayActivity + " |\n" +
+                "| hourTuesday: " + hourTuesday + " |" + " nameTuesdayInstructor: " + nameTuesdayInstructor + " |" + " nameTuesdayActivity: " + nameTuesdayActivity + " |\n" +
+                "| hourWednesday: " + hourWednesday + " |" + " nameWednesdayInstructor: " + nameWednesdayInstructor + " |" + " nameWednesdayActivity: " + nameWednesdayActivity + " |\n" +
+                "| hourThursday: " + hourThursday + " |" + " nameThursdayInstructor: " + nameThursdayInstructor + " |" + " nameThursdayActivity: " + nameThursdayActivity + " |\n" +
+                "| hourFriday: " + hourFriday + " |" + " nameFridayInstructor: " + nameFridayInstructor + " |" + " nameFridayActivity: " + nameFridayActivity + " |\n" +
+                "| hourSaturday: " + hourSaturday + " |" + " nameSaturdayInstructor: " + nameSaturdayInstructor + " |" + " nameSaturdayActivity: " + nameSaturdayActivity + " |\n" +
+                "| hourSunday: " + hourSunday + " |" + " nameSundayInstructor: " + nameSundayInstructor + " |" + " nameSundayActivity: " + nameSundayActivity + " |\n";
     }
 }

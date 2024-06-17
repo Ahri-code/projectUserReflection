@@ -1,7 +1,10 @@
 package com.business;
 
+import com.business.dto.Planning;
+import com.business.dto.Request;
 import com.business.model.Activity;
 import com.business.model.Instructor;
+import com.business.service.ServicePlanning;
 import com.business.utilities.Utility;
 
 import java.util.ArrayList;
@@ -10,8 +13,8 @@ import java.util.List;
 public class Main extends Utility {
     public static void main(String[] args) {
 
-        final String activityPath ="C:\\IntelliJ\\Academy\\Files\\Activities.txt";
-        final String instructorPath ="C:\\IntelliJ\\Academy\\Files\\Instructor.txt";
+        final String activityPath ="D:\\IntelliJ\\Academy\\Files\\Activities.txt";
+        final String instructorPath ="D:\\IntelliJ\\Academy\\Files\\Instructor.txt";
         List<String> input = readLine(activityPath);
         List<Activity> activities = loadActivities(input);
         System.out.println("Number of activities: " + activities.size());
@@ -20,6 +23,18 @@ public class Main extends Utility {
         List<Instructor> instructor = loadInstructor(input);
         System.out.println("Number of instructor: " + instructor.size());
 
+        Request rq = new Request("Create", "Monday", 10, 1, 4);
+        Request re = new Request("Create", "Friday", 10, 1, 4);
+        Request rm = new Request("Remove", "Monday", 10, 1, 4);
+
+//        new ServicePlanning().planningManager(rq, instructor, activities);
+
+        Planning plan = new Planning();
+        plan = new ServicePlanning().planningManager(rq, instructor, activities, plan);
+        plan = new ServicePlanning().planningManager(re, instructor, activities, plan);
+        System.out.println(plan);
+        plan = new ServicePlanning().planningManager(rm, instructor, activities, plan);
+        System.out.println(plan);
     }
 
     private static List<Activity> loadActivities(List<String> input) {
