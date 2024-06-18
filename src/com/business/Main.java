@@ -9,6 +9,7 @@ import com.business.utilities.Utility;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Main extends Utility {
     public static void main(String[] args) {
@@ -39,35 +40,53 @@ public class Main extends Utility {
 
     private static List<Activity> loadActivities(List<String> input) {
 
-        List<Activity> resp = new ArrayList<Activity>();
-        String[] token = null;
-        Activity activity = null;
-        for(String item : input) {
-            activity = new Activity();
-            token = item.split(",");
+        return input.stream().map(item -> {
+            Activity activity = new Activity();
+            String[] token = item.split(",");
             activity.setId(Integer.parseInt(token[0]));
             activity.setActivity(token[1]);
-            resp.add(activity);
-        }
+            return activity;
+        }).collect(Collectors.toList());
 
-        return resp;
+//        List<Activity> resp = new ArrayList<Activity>();
+//        String[] token = null;
+//        Activity activity = null;
+//        for(String item : input) {
+//            activity = new Activity();
+//            token = item.split(",");
+//            activity.setId(Integer.parseInt(token[0]));
+//            activity.setActivity(token[1]);
+//            resp.add(activity);
+//        }
+//
+//        return resp;
     }
 
     private static List<Instructor> loadInstructor(List<String> input) {
 
-        List<Instructor> resp = new ArrayList<Instructor>();
-        String[] token = null;
-        Instructor instructor = null;
-        for(String item : input) {
-            instructor = new Instructor();
-            token = item.split(",");
+        return input.stream().map(item -> {
+            Instructor instructor = new Instructor();
+            String[] token = item.split(",");
             instructor.setId(Integer.parseInt(token[0]));
             instructor.setSurname(token[1]);
             instructor.setName(token[2]);
             instructor.setIdActivity(Integer.parseInt(token[3]));
-            resp.add(instructor);
-        }
+            return instructor;
+        }).collect(Collectors.toList());
 
-        return resp;
+//        List<Instructor> resp = new ArrayList<Instructor>();
+//        String[] token = null;
+//        Instructor instructor = null;
+//        for(String item : input) {
+//            instructor = new Instructor();
+//            token = item.split(",");
+//            instructor.setId(Integer.parseInt(token[0]));
+//            instructor.setSurname(token[1]);
+//            instructor.setName(token[2]);
+//            instructor.setIdActivity(Integer.parseInt(token[3]));
+//            resp.add(instructor);
+//        }
+//
+//        return resp;
     }
 }
